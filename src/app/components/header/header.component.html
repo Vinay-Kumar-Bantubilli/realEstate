@@ -1,0 +1,14 @@
+    <mat-toolbar class="header">
+        <!-- <mat-icon mat-icon-button  class="mat-icon">menu</mat-icon> -->
+       <span class="my-app-logo">My App</span>
+       <div class="tabs hidden">
+           <button class="tab" mat-button style="--tabs-animation:1" routerLink="home"  routerLinkActive="active" (click)="openTabs()">Home</button>
+           <button class="tab" mat-button style="--tabs-animation:2" routerLink="about" routerLinkActive="active" (click)="openTabs()">About</button>
+           <button class="tab" mat-button style="--tabs-animation:3" routerLink="about" routerLinkActive="active" (click)="openTabs()">Our Services</button>
+           <button class="tab" mat-button style="--tabs-animation:4" routerLink="about" routerLinkActive="active" (click)="openTabs()">Resources</button>
+           <button class="tab" mat-button style="--tabs-animation:5" routerLink="about" routerLinkActive="active" (click)="openTabs()">Contact Us</button>
+       </div>
+
+       <button class="tabs-join-us-now" mat-raised-button><span>JOIN US NOW</span></button>
+       <mat-icon mat-icon-button (click)="openTabs()" class="mat-icon list">list</mat-icon>
+     </mat-toolbar>

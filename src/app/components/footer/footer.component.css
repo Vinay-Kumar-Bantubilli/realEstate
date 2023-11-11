@@ -1,0 +1,193 @@
+.footer{
+    padding: 4vw;
+    width: 100%;
+    background-color: rgb(74, 38, 108);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.footer-logo{
+    width: 15%;
+}
+.footer-logo .content{
+    color: white;
+} 
+/* .footer-logo .content span{
+
+} */
+.footer-logo-image{
+    width: 100%;
+    
+}
+.footer-logo-image img{
+    width: 100%;
+}
+
+
+
+
+.footer-get-in-touch{
+    width: 30%;
+}
+.footer-get-in-touch .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-get-in-touch h1{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.social-profiles{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+    align-self: center;
+}
+.social-profiles a{
+    text-decoration: none;
+}
+.social{
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: scale 0.2s;
+    color: aqua;
+    opacity: 0;
+    animation: slideDown forwards ease 1s ;
+    animation-delay: calc(.2s * var(--i));
+    font-size: 20px;
+}
+
+.social:hover{
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 10px aqua;
+    scale: 1.3;
+}
+@keyframes slideDown {
+    0%{
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@media screen and (max-width:750px) {
+    .footer-logo{
+        width: 100%;
+    }
+    .footer-logo .content span{
+        font-size: 10px;
+    }
+}
+
+
+.back-to-top{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgb(91, 49, 130);
+    padding: 1vw;
+}
+.back-to-top a{
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.3s;
+    padding: 10px;
+}
+.back-to-top a:hover{
+    font-size: 16px;
+}
+.back-to-top i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.footer-get-in-touch{
+    padding: 3vw;
+}
+
+
+
+
+.footer-address{
+    width: 30vw;
+    padding: 2vw;
+}
+.footer-address .address-text, .email, .mobile{
+    color: white;
+}
+
+
+@media screen and (max-width:750px){
+    .footer{
+        flex-direction: column;
+    }
+    .footer-address{
+        width: 100%;
+        margin-top: 5vw;
+    }
+    .footer-get-in-touch{
+        width: 100%;
+    }
+    .social-profiles{
+        justify-content: space-around;
+    }
+    .social-profiles .profile{
+        margin-left: 10vw;
+    }
+    .back-to-top i{
+        font-size: 15px;
+    }
+    .footer-address .address-text, .email, .mobile{
+        font-size: 10px;
+    }
+    .footer-address h2{
+        font-size: 15px;
+    }
+    .footer-get-in-touch h1{
+        font-size: 15px;
+    }
+    .footer-get-in-touch input{
+        scale: 0.7;
+    }
+    .footer-get-in-touch button{
+        scale: 0.7;
+    }
+    .footer-get-in-touch .form{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .back-to-top i{
+        font-size: 8px;
+    }
+    .footer-address{
+        padding: 0vw 5vw;
+    }
+}
+.copy-right{
+    background-color: rgb(74, 38, 108);
+    padding: 30px 0;
+    text-align: center;
+}
+.copy-right a{
+    text-decoration: none;
+    color: white;
+    transition: color 1s;
+}
+.copy-right a:hover{
+    text-decoration: none;
+    color: yellow;
+}

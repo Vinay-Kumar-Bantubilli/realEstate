@@ -1,0 +1,101 @@
+.header{
+    background-color: rgb(149, 61, 149);
+    color: white;
+    z-index: 1000;
+}
+.header .tabs{
+    display: flex;
+    gap: 10px;
+    margin: 0px 20px;
+}
+.tab{
+    animation: Tabs-Animation forwards ease-in 1s;
+    animation-delay: calc(0.1s * var(--tabs-animation));
+    opacity: 0;
+    z-index: 100;
+    transition: scale 0.2s;
+}
+.tab:hover{
+    scale: 1.2;
+}
+/* .active{
+    box-shadow: 0px 2px 3px black;
+} */
+.mobile-list-button{
+    display: none;
+}
+.mat-icon{
+    cursor: pointer;
+}
+.mat-icon.list{
+    display: none;
+}
+
+@keyframes Tabs-Animation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media screen and (max-width : 350px) {
+    .header .tabs{
+        margin: 0px;
+        background-color: rgb(56, 162, 255);
+        z-index: 10;
+        color: white;
+    }
+    .header .tabs {
+        background-color: rgb(106, 47, 106);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 8vh;
+        left: 0px;
+        width: 100%;
+    }
+    .my-app-logo{
+        font-size: 14px;
+    }
+    mat-toolbar .mat-icon{
+        font-size: large;
+    }
+    .header .tabs.hidden{
+        display: none;
+    }
+    .mat-icon.list{
+        display: block;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    button.tabs-join-us-now{
+        scale: 0.6;
+    }
+    .header .tabs {
+        background-color: white;
+        color: black;
+        padding: 5px;
+        display: flex;
+        gap: 5px;
+        position: absolute;
+        top: 8vh;
+        left: 0px;
+        width: 100%;
+    }
+    .header .tabs button{
+        width: 100%;
+    }
+    /* .header .tabs.hidden {
+        display: none;
+    } */
+    .tabs-join-us-now{
+        scale: 0.8;
+    }
+    .mobile-list-button{
+        display: block;
+        float: right;
+    }
+}
+

@@ -1,0 +1,785 @@
+.home-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+.home-image .content span{
+    font-size: large;
+    margin: 20px 0px;
+    opacity: 1;
+}
+@keyframes home-span {
+    0%{
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.yellow-text{
+    color: yellow;
+}
+.move{
+    animation: home-span forwards ease-in 1s;
+}
+@keyframes home-span {
+    0%{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.home-image .content h1{
+    font-size: 50px;
+    margin: 20px 0px;
+    animation: home-h1 forwards ease 2s;
+}
+
+@keyframes home-h1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.home-image button{
+    animation: move-button forwards ease 1s;
+    animation-delay: 1s;
+    opacity: 0;
+}
+@keyframes move-button {
+    0%{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.home-image img{
+    width: 105%;
+    height: 100%;
+    z-index: 1;
+}
+.home-image .content{
+    position: absolute;
+    z-index: 3;
+    color: white;
+
+}
+.home-image .opacity{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:740px){
+    .home-image{
+        height: 40vh;
+        padding-top: 3.5vh;
+    }
+    .content mat-card-actions button{
+        scale: 0.8;
+        font-size: 10px;
+    }
+    .content mat-card-actions button:hover{
+        scale: 0.7;
+    }
+    .home-image .content span{
+        font-size: 10px;
+        margin: 3px 0px;
+        font-weight: 350;
+    }
+    .home-image .content h1{
+        font-size: 20px;
+        margin: 3px 0px;
+    }
+}
+
+
+
+.about-lr{
+    display: flex;
+    flex-direction: row;
+    padding: 2vw;
+}
+
+.about-lr-content mat-card-subtitle,span{
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: 400;
+}
+.about-lr-content mat-card-title{
+    font-size: 40px;
+    margin: 20px 0;
+    line-height: 8vh;
+}
+.about-lr-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5vw 3vw;
+}
+.about-lr-photos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    gap: 2vw;
+    padding: 2vw;
+}
+.about-lr-photos .image-1{
+    width: 18vw;
+    height: 50vh;
+    background-image: url(../../../assets/photos/chess-1.jpg);
+    background-size: 210%;
+    background-repeat: no-repeat;
+    background-position: -10vw;
+    animation: Image-1 forwards ease-in 1s;
+}
+
+@keyframes Image-1 {
+    0%{
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.about-lr-photos .image-2{
+    width: 18vw;
+    height: 50vh;
+    background-image: url(../../../assets/photos/chess-2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: Image-2 forwards ease-in 1s;
+}
+
+@keyframes Image-2 {
+    0%{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+@media screen and (max-width:740px){
+    .about-lr-content{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .about-lr-photos img{
+        width: 40%;
+        height: 100%;
+    }
+    .about-lr-photos .image-1{
+        width: 40%;
+        height: 50vh;
+    }
+    .about-lr-photos .image-2{
+        width: 40%;
+        height: 50vh;
+    }
+    .about-lr-content mat-card-subtitle, span{
+        font-size: 12px;
+        margin: 3px 0;
+    }
+    .about-lr-content mat-card-title{
+        font-size: 22px;
+        margin: 3px 0;
+        line-height: normal;
+    }
+    .about-lr-content mat-card-actions button{
+        font-size: 10px;
+        scale: .9;
+    }
+    .about-lr-content mat-card-actions button:hover{
+        scale: .8;
+    }
+}
+
+
+
+
+.our-services-content{
+    text-align: center;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+}
+.our-services-content .main{
+    width: 50vw;
+}
+.our-services-content .main mat-card-subtitle{
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: 400;
+}
+.our-services-content .main mat-card-title{
+    font-size: 40px;
+    margin: 20px 0;
+    line-height: 6vh;
+}
+
+.our-services-cards{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 8vw;
+}
+.our-services-cards .card{
+    opacity: 0;
+    max-width: 300PX;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: cards-Animation forwards ease-in 1s;
+    animation-delay: calc(0.3s * var(--cards-animation));
+}
+@keyframes cards-Animation {
+    0%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.our-services-cards .card button{
+    background-color: rgb(106, 45, 106);
+    transition: scale 0.3s;
+}
+.our-services-cards .card button:hover{
+    scale: .9;
+}
+
+
+
+
+@media screen and (max-width:740px){
+    .our-services-content .main{
+        width: 100%;
+    }
+    .our-services-content .main mat-card-subtitle{
+        font-size: 10px;
+        margin: 5px 0;
+    }
+    .our-services-content .main mat-card-title{
+        font-size: 20px;
+        margin: 5px 0;
+        line-height: 3vh;
+    }
+    .our-services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .our-services-cards .card button{
+        scale: .8;
+        font-size: 10px;
+    }
+    .our-services-cards .card button:hover{
+        scale: .75;
+    }
+    .our-services-cards .card mat-card-title{
+        font-size: 12px;
+    }
+    .our-services-cards .card mat-card-subtitle{
+        font-size: 10px;
+    }
+}
+
+
+
+.our-culture{
+    width: 100%;
+    padding: 5vw;
+    background-color: rgb(65, 0, 126);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    padding-bottom: 40vh;
+}
+
+.our-culture .content{
+    color: white;
+    padding: 0 2vw;
+}
+.our-culture .content h1{
+    font-size: 40px;
+    color: white;
+}
+.our-culture .image{
+    width: 50%;
+}
+.our-culture .content{
+    width: 50%;
+}
+.our-culture .image img{
+    width: 100%;
+}
+
+@media screen and (max-width:750px) {
+    .our-culture{
+        flex-direction: column;
+    }
+    .our-culture .image{
+        width: 100%;
+    }
+    .our-culture .content{
+        width: 100%;
+    }
+    .our-culture .content h1{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .our-culture .content mat-card-subtitle{
+        font-size: 10px;
+        line-height: 13px;
+        font-weight: 300;
+    }
+    .our-culture{
+        padding-bottom: 20vh;
+    }
+}
+
+
+
+
+.our-partners{
+    text-align: center;
+    padding: 5vw;
+    position: relative;
+    top: -22vh;
+    background-color: aliceblue;
+    width: 70vw;
+    border-radius: 2vw;
+}
+.our-partners-content {
+    display: flex;
+    gap: 2vw;
+    scroll-behavior: auto;
+    overflow-x: auto;
+    padding-bottom: 1vw;
+}
+
+.our-partners-content .card{
+    min-width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.our-partners-heading{
+    font-size: 40px;
+    margin-bottom: 4vw;
+}
+
+.our-partners-content .card img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:750px) {
+    .our-partners h1{
+        font-size: 20px;
+    }
+    .our-partners-content::-webkit-scrollbar {
+        display: none;
+    }
+    .our-partners{
+        top: -18vh;
+    }
+}
+
+
+
+
+
+.amazing-expertise{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vw;
+}
+
+.amazing-expertise .content{
+    width: 40vw;
+    padding: 2vw;
+}
+.amazing-expertise .image{
+    width: 20vw;
+    height: 50vh;
+    background-image: url(../../../assets/photos/chess-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: amazing-expertise-image forwards ease-in 1s;
+    opacity: 0;
+}
+.amazing-expertise .content mat-card-subtitle{
+    font-size: 20px;
+    line-height: 4vh;
+}
+.amazing-expertise .content h1{
+    font-size: 40px;
+    line-height: 3vw;
+}
+
+@keyframes amazing-expertise-image {
+    0%{
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.amazing-expertise .image img{
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width:750px) {
+    .amazing-expertise{
+        flex-direction: column;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .amazing-expertise .content{
+        padding: 3vw;
+        width: 100%;
+    }
+    .amazing-expertise .image{
+        width: 100%;
+    }
+    .amazing-expertise .content mat-card-subtitle{
+        font-size: 10px;
+        line-height: 8vw;
+    }
+    .amazing-expertise .content h1{
+        font-size: 20px;
+        line-height: 8vw;
+
+    }
+    .amazing-expertise .content button{
+        font-size: 8px;
+        scale: 0.7;
+    }
+    .amazing-expertise .content button:hover{
+        scale: 0.6;
+    }
+    .amazing-expertise .image{
+        align-self: center;
+        width: 45%;
+        height: 25vh;
+        background-image: url(../../../assets/photos/chess-2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+   
+}
+
+
+
+
+
+
+
+
+/* e-learning */
+.e-learning{
+    display: flex;
+    flex-direction: row;
+    background-image: url(../../../assets/photos/photo-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-color: rgb(0, 0, 0, 0.5); */
+}
+
+.e-learning .container{
+    width: 40vw;
+}
+.e-learning .container{
+    padding: 3vw;
+}
+.e-learning .content h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: aliceblue;
+    text-shadow: 2px 2px 3px black;
+}
+.e-learning .image img{
+    width: 100%;
+    animation: e-learning-animation forwards ease-in-out 1s;
+    opacity: 0;
+    box-shadow: 1px 1px 20px black;
+}
+@keyframes e-learning-animation {
+    0%{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width:750px) {
+    .e-learning{
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-size: 200%;
+        background-position-x: -40vw;
+    }
+    .e-learning .container{
+        width: 100%;
+    }
+    .e-learning .container{
+        padding: 3vw;
+    }
+    .e-learning .content h1{
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: -2px;
+        font-weight: 500;
+
+    }
+    .e-learning .content b{
+        font-size: 10px;
+    }
+    .e-learning .content button{
+        font-size: 8px;
+        scale: 0.8;
+    }
+}
+
+
+
+
+
+
+/* gallery */
+.gallery{
+    text-align: center;
+    padding: 5vw;
+}
+.gallery .heading h1{
+    font-size: 45px;
+    margin: 4vw;
+    font-weight: 500;
+}
+.gallery .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+}
+.gallery .images mat-card{
+    width: 20vw;
+    animation: gallery-animation forwards ease-in-out 1s;
+    animation-delay: calc(0.25s * var(--gallery));
+    opacity: 0;
+}
+
+@keyframes gallery-animation {
+    0%{
+        opacity: 0;
+        transform: translateX(600px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@media screen and (max-width:750px) {
+    .gallery .heading h1{
+        font-size: 15px;
+        margin: 0;
+    }
+    .gallery .images mat-card{
+        width: 90%;
+    }
+}
+
+
+
+.joining{
+    padding: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(../../../assets/photos/gallery/g5.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+}
+
+
+.joining .opacity{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.joining .form{
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(61, 61, 61, 0.5);
+    box-shadow: 1px 1px 20px black;
+    padding: 3vw;
+    z-index: 2;
+    animation: form-animation forwards ease-in-out 1.5s;
+    opacity: 0;
+}
+@keyframes form-animation {
+    0%{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.joining .content{
+    width: 40%;
+    padding: 3vw;
+    color: white;
+    z-index: 2;
+}
+.joining .content h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.joining .form h1{
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+}
+.joining .form textarea{
+   max-height: 20vh;
+   min-height: 10vh;
+}
+
+.joining .content b{
+    letter-spacing: 6px;
+}
+.joining .content h1{
+    letter-spacing: 5px;
+    line-height: 3vw;
+}
+@media screen and (max-width:750px) {
+    .joining{
+        padding: 3vw;
+        display: flex;
+        flex-direction: column;
+        background-size: 320%;
+    }
+    .joining .form{
+        width: 100%;
+        gap: 0px;
+    }
+    .joining .content{
+        width: 100%;
+    }
+    .joining .form input{
+        scale: 0.8;
+    }
+    .joining .form textarea{
+        scale: 0.8;
+    }
+    .joining .form h1{
+        font-size: 20px;
+    }
+    .joining .form button{
+        scale: 0.8;
+        font-size: 8px;
+     }
+    .joining .form textarea{
+       max-height: 10vh;
+       min-height: 5vh;
+    }
+    .joining .content h1{
+        font-size: 40px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    .joining .content b{
+        font-size: 10px;
+        margin: 0;
+    }
+    .joining .content h1{
+        font-size: 23px;
+        line-height: 6vw;
+    }
+    .joining .content button{
+        scale: 0.8;
+        font-size: 11px;
+    }
+}
+
+
+.back-to-top-icon{
+    position: fixed;
+    right: 3vw;
+    bottom: 3vw;
+    color: aqua;
+    padding: 1vw;
+    background-color: black;
+    z-index: 100;
+    border-radius: 5px;
+}
+.back-to-top-icon i{
+    font-size: 18px;
+}
